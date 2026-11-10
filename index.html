@@ -1,1 +1,119 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <title>الذكاء الاصطناعي السوري</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #101827;
+      color: white;
+      min-height: 100vh;
+    }
+    header {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #29364a;
+    }
+    .logo { font-size: 21px; font-weight: bold; color: #35d49a; }
+    .login {
+      background: #26364b;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+    main {
+      max-width: 850px;
+      margin: 65px auto;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 { font-size: 34px; }
+    .subtitle { color: #aab8ca; line-height: 1.9; }
+    .chat {
+      margin-top: 35px;
+      background: #1b293c;
+      border: 1px solid #34465d;
+      border-radius: 18px;
+      padding: 15px;
+    }
+    textarea {
+      width: 100%;
+      min-height: 110px;
+      background: transparent;
+      border: 0;
+      outline: none;
+      color: white;
+      font-size: 17px;
+      resize: vertical;
+    }
+    button {
+      background: #20bd88;
+      color: #071b15;
+      border: 0;
+      padding: 13px 25px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #answer {
+      margin-top: 20px;
+      padding: 15px;
+      background: #1b293c;
+      border-radius: 12px;
+      line-height: 1.8;
+      display: none;
+      text-align: right;
+    }
+    footer { text-align: center; color: #8796aa; padding: 30px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🇸🇾 الذكاء الاصطناعي السوري</div>
+    <a class="login" href="#">تسجيل الدخول</a>
+  </header>
+
+  <main>
+    <h1>مرحباً بك في ذكائك الاصطناعي</h1>
+    <p class="subtitle">
+      مساعدك الذكي للمحادثة والبحث والمعلومات الحديثة وإنشاء الأفكار.
+    </p>
+
+    <div class="chat">
+      <textarea id="question" placeholder="اكتب سؤالك هنا..."></textarea>
+      <button onclick="sendMessage()">إرسال السؤال</button>
+    </div>
+
+    <div id="answer"></div>
+  </main>
+
+  <footer>الذكاء الاصطناعي السوري © 2026</footer>
+
+  <script>
+    function sendMessage() {
+      const question = document.getElementById("question").value.trim();
+      const answer = document.getElementById("answer");
+
+      if (!question) {
+        alert("يرجى كتابة سؤالك أولاً");
+        return;
+      }
+
+      answer.style.display = "block";
+      answer.textContent =
+        "تم استلام سؤالك. يجب ربط خادم الذكاء الاصطناعي لتوليد الإجابة.";
+    }
+  </script>
+</body>
+</html>
+
